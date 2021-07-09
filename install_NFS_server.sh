@@ -16,3 +16,4 @@ EOF
 exportfs -a
 systemctl restart nfs-kernel-server
 systemctl status nfs-kernel-server
+cd ~

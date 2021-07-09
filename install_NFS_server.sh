@@ -5,7 +5,6 @@ echo "--------------------------------------------------------------------------
 echo "Please declare file path for NFS, Example: /mnt/nfs_share"
 read FILE_PATH
 mkdir -p $FILE_PATH
-cd $FILE_PATH
 echo "Your File Path is $FILE_PATH"
 chown -R nobody:nogroup $FILE_PATH
 chmod 777 $FILE_PATH
@@ -17,7 +16,7 @@ echo "No_subtree_check: Eliminates subtree checking."
 echo "Input a CIDR Block, Example 192.168.0.0/24 or 10.0.0.0/24"
 read CIDR_BLOCK
 echo "----------------------------------------------------------------------------"
-sudo cd /etc/exports
+cd /etc
 cat >> ./exports << EOF
 $FILE_PATH  $CIDR_BLOCK(rw,sync,no_subtree_check)
 EOF

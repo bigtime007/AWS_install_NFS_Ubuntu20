@@ -1,7 +1,7 @@
 #!/bin/bash
 apt-get update && apt-get upgrade -y
 apt install nfs-kernel-server
-echo "Please declare file path for NFS, Example: /mnt/nfs_share
+echo "Please declare file path for NFS, Example: /mnt/nfs_share"
 read FILE_PATH
 mkdir -p $FILE_PATH
 echo "Your File Path is $FILE_PATH"

@@ -5,6 +5,7 @@ echo "--------------------------------------------------------------------------
 echo "Please declare file path for NFS, Example: /mnt/nfs_share"
 read FILE_PATH
 mkdir -p $FILE_PATH
+cd $FILE_PATH
 echo "Your File Path is $FILE_PATH"
 chown -R nobody:nogroup $FILE_PATH
 chmod 777 $FILE_PATH
